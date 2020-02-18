@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :set_user, only: [:edit, :update]
+    before_action :set_user, only: [:edit, :update, :show]
 
     def new
         @user = User.new
@@ -24,6 +24,9 @@ class UsersController < ApplicationController
             flash[:success] = "Your account was successfully updated"
             redirect_to articles_path
         end
+    end
+
+    def show 
     end
 
     private
